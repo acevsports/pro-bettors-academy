@@ -25,7 +25,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       min-height: 100vh;
       text-align: center;
       padding: 2rem;
@@ -37,10 +37,23 @@
       margin-bottom: 0.5rem;
     }
 
-    p {
-      max-width: 600px;
+    h2 {
+      color: var(--brand-color);
+      margin-top: 1.5rem;
+    }
+
+    p, li {
+      max-width: 700px;
       line-height: 1.6;
       font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      text-align: left;
+      display: inline-block;
+      margin: 0 auto 1rem auto;
+      padding-left: 1.2rem;
     }
 
     a {
@@ -70,13 +83,36 @@
 <body>
   <h1>Pro Bettors Academy</h1>
   <p><strong>Become a Professional Sports Bettor</strong></p>
-  <p>Welcome to Pro Bettors Academy — your trusted resource for betting analytics and education. 
-     Our goal is to empower individuals to make informed, data-driven betting decisions.</p>
 
-  <a href="/privacy.html">Privacy Policy</a>
+  <h2>About Dashboard Manager Add-on</h2>
+  <p>
+    Dashboard Manager is a Google Sheets add-on designed to simplify sports betting record-keeping 
+    for the Pro Bettors Academy community. It automates monthly statistics and log management 
+    so users can focus on analysis rather than manual sheet setup.
+  </p>
+
+  <h2>Key Features</h2>
+  <ul>
+    <li><strong>Create Month:</strong> Automatically generate new monthly sheets and corresponding logs.</li>
+    <li><strong>Show Month:</strong> Display only the current month’s sheets for a focused view.</li>
+    <li><strong>Delete Month:</strong> Safely remove month sheets while keeping your dashboard organized.</li>
+    <li><strong>Custom Menu:</strong> Easily access all features via the "📅 Dashboard Manager" menu in Google Sheets.</li>
+  </ul>
+
+  <h2>Google Data Usage</h2>
+  <p>
+    This add-on only accesses your <strong>current Google Sheet</strong> to manage sheets and menus. 
+    It requires minimal OAuth permissions: 
+    <strong>currentonly</strong> (access your current sheet) and 
+    <strong>UI</strong> (add custom menus and dialogs). 
+    No data leaves your Google account, and nothing is shared externally.
+  </p>
+
+  <a href="/privacy.html">View Privacy Policy</a>
 
   <footer>
     <p>© 2025 Pro Bettors Academy</p>
   </footer>
 </body>
 </html>
+
