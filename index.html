@@ -31,9 +31,7 @@
       line-height: 1.6;
     }
     .container { max-width: 720px; width: 100%; }
-    .hero {
-      margin-bottom: 2.5rem;
-    }
+    .hero { margin-bottom: 2.5rem; }
     .hero img {
       max-width: 100%;
       height: auto;
@@ -169,8 +167,12 @@
        target="_blank" class="btn">
       View Dashboard Overview & Screenshots
     </a>
-    <a href="/privacy.html" class="btn">View Privacy Policy</a>
-    <a href="/terms-of-service.html" class="btn">View Terms of Service</a>
+
+    <!-- Privacy Policy + Terms of Service inline buttons -->
+    <div style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
+      <a href="/privacy.html" class="btn">View Privacy Policy</a>
+      <a href="/terms-of-service.html" class="btn">View Terms of Service</a>
+    </div>
 
     <footer>
       <p>© 2025 Pro Bettors Academy</p>
@@ -178,4 +180,3 @@
   </div>
 </body>
 </html>
-
