@@ -12,9 +12,10 @@
   <style>
     :root {
       --brand-color: #f3bd48;
-      --text-color: #e0e7ff;
+      --text-color: #ffffff; /* Pure white – ALL body text */
       --bg-color: #03203e;
       --card-bg: rgba(255, 255, 255, 0.05);
+      --scope-color: #ffffff; /* Scopes also white – no blue */
     }
     * { box-sizing: border-box; }
     body {
@@ -31,24 +32,28 @@
       line-height: 1.6;
     }
     .container { max-width: 720px; width: 100%; }
-    h1 {
+    h1, h2, h3 {
       color: var(--brand-color);
+      margin: 2rem 0 0.8rem 0;
+    }
+    h1 {
       font-size: 2.6rem;
       font-weight: 700;
       margin: 0 0 0.4rem;
     }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.15rem; }
     .tagline {
       font-size: 1.25rem;
       font-weight: 600;
       margin-bottom: 2rem;
       opacity: 0.95;
     }
-    h2 {
-      color: var(--brand-color);
-      font-size: 1.6rem;
-      margin: 2rem 0 0.8rem;
+    p, li {
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+      color: var(--text-color); /* Force white */
     }
-    p, li { font-size: 1.05rem; margin-bottom: 1rem; }
     ul {
       text-align: left;
       display: inline-block;
@@ -64,16 +69,11 @@
       text-align: left;
       backdrop-filter: blur(4px);
     }
-    .card h3 {
-      margin: 0 0 0.8rem;
-      color: var(--brand-color);
-      font-size: 1.15rem;
-    }
     .scope {
       font-family: monospace;
       font-size: 0.9rem;
       word-break: break-all;
-      color: #a0d2ff;
+      color: var(--scope-color); /* Now white */
     }
     .btn {
       display: inline-block;
@@ -95,6 +95,7 @@
       margin-top: 3rem;
       font-size: 0.85rem;
       opacity: 0.7;
+      color: var(--text-color);
     }
     @media (max-width: 480px) {
       h1 { font-size: 2.2rem; }
@@ -117,26 +118,26 @@
     <ul>
       <li><strong>Create Month:</strong> Instantly generate a new monthly sheet + log with one click.</li>
       <li><strong>Show Month:</strong> Hide all but the current month for a clean, focused workspace.</li>
-      <li><strong>Delete Month:</strong> Remove old months safely while preserving your master dashboardformula.</li>
-      <li><strong>Custom Menu:</strong> Access everything via the “📅 Dashboard Manager” menu in Google Sheets.</li>
+      <li><strong>Delete Month:</strong> Remove old months safely while preserving your master dashboard.</li>
+      <li><strong>Custom Menu:</strong> Access everything via the “Dashboard Manager” menu in Google Sheets.</li>
     </ul>
 
     <!-- Privacy & Security Section -->
     <div class="card">
-      <h3>🔒 Your Privacy Comes First</h3>
+      <h3>Your Privacy Comes First</h3>
       <p>
         This add-on <strong>only</strong> accesses the <strong>exact copy</strong> of the <em>Pro Bettors Academy Dashboard</em> you open. 
         It <strong>cannot</strong> see or touch any other sheet, file, or data in your Google Drive.
       </p>
 
-      <h3>✅ Google-Reviewed Permissions</h3>
+      <h3>Google-Reviewed Permissions</h3>
       <p class="scope">https://www.googleapis.com/auth/spreadsheets</p>
       <p>• Read/write <strong>only</strong> the open sheet</p>
 
       <p class="scope">https://www.googleapis.com/auth/script.container.ui</p>
       <p>• Add menus & dialogs <strong>inside</strong> that sheet</p>
 
-      <h3>🛡 Zero Risk – 100 % Contained</h3>
+      <h3>Zero Risk – 100 % Contained</h3>
       <p>
         <strong>Your data never leaves Google.</strong> The add-on is hard-limited to the single sheet you’re using—nothing else is possible. 
         Google’s scope review guarantees it.
