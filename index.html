@@ -114,7 +114,7 @@
 
     <h2>About Dashboard Manager Add-on</h2>
     <p>
-      Dashboard Manager is a lightweight Google Sheets add-on built exclusively for the Pro Bettors Academy community. 
+      Dashboard Manager is a lightweight Google Sheets add-on built exclusively for the Pro Bettors Academy community.
       It automates monthly sheet creation, log tracking, and cleanup—so you can focus on strategy, not spreadsheet maintenance.
     </p>
 
@@ -126,31 +126,31 @@
       <li><strong>Custom Menu:</strong> Access everything via the “Dashboard Manager” menu in Google Sheets.</li>
     </ul>
 
-    <!-- Privacy & Security Section -->
+    <!-- Updated Privacy & Security Section -->
     <div class="card">
       <h3>Your Privacy Comes First</h3>
       <p>
-        This add-on <strong>only</strong> accesses the <strong>exact copy</strong> of the <em>Pro Bettors Academy Dashboard</em> you open. 
-        It <strong>cannot</strong> see or touch any other sheet, file, or data in your Google Drive.
+        This add-on <strong>only</strong> accesses the <strong>exact copy</strong> of the <em>Pro Bettors Academy Dashboard</em> you have open.
+        It <strong>cannot</strong> see, touch, or access any other file in your Google Drive — guaranteed by Google’s strictest limited scope.
       </p>
 
-      <h3>Google-Reviewed Permissions</h3>
-      <p class="scope">https://www.googleapis.com/auth/spreadsheets</p>
-      <p>• Read/write <strong>only</strong> the open sheet</p>
+      <h3>Google-Reviewed Permissions (Narrowest Possible)</h3>
+      <p class="scope">https://www.googleapis.com/auth/spreadsheets.currentonly</p>
+      <p>• View and manage <strong>only</strong> the spreadsheet this add-on is installed in (the one you opened)</p>
 
       <p class="scope">https://www.googleapis.com/auth/script.container.ui</p>
-      <p>• Add menus & dialogs <strong>inside</strong> that sheet</p>
+      <p>• Add menus & dialogs <strong>inside</strong> that sheet only</p>
 
       <h3>Zero Risk – 100 % Contained</h3>
       <p>
-        <strong>Your data never leaves Google.</strong> The add-on is hard-limited to the single sheet you’re using—nothing else is possible. 
-        Google’s scope review guarantees it.
+        <strong>Your data never leaves Google.</strong> The add-on is hard-limited by Google to the single spreadsheet you’re using — nothing else is possible, even if we wanted it to be.
+        This is enforced by the official <code>@OnlyCurrentDoc</code> restriction and the <code>.currentonly</code> scope.
       </p>
     </div>
 
-    <!-- All three buttons inline -->
+    <!-- Buttons -->
     <div class="button-row">
-      <a href="https://docs.google.com/document/d/1cBJaCFlk2RUJPWnwrVou0tsp7TWkMvVD4_OzMtIkbks/edit?usp=sharing" 
+      <a href="https://docs.google.com/document/d/1cBJaCFlk2RUJPWnwrVou0tsp7TWkMvVD4_OzMtIkbks/edit?usp=sharing"
          target="_blank" class="btn">View Dashboard Overview & Screenshots</a>
       <a href="/privacy.html" class="btn">View Privacy Policy</a>
       <a href="/terms-of-service.html" class="btn">View Terms of Service</a>
