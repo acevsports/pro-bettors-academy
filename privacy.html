@@ -3,19 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – Pro Bettors Academy</title>
-
+  <title>Privacy Policy – Pro Bettors Academy Dashboard Manager</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
-
   <style>
     :root {
       --brand-color: #f3bd48;
       --text-color: #ffffff;
       --bg-color: #03203e;
     }
-
     body {
       margin: 0;
       font-family: "Inter", Arial, sans-serif;
@@ -26,16 +23,9 @@
       margin-inline: auto;
       line-height: 1.6;
     }
-
-    h1, h2 {
-      color: var(--brand-color);
-    }
-
-    a {
-      color: var(--brand-color);
-      text-decoration: none;
-    }
-
+    h1, h2 { color: var(--brand-color); }
+    a { color: var(--brand-color); text-decoration: none; }
+    code { background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
     footer {
       margin-top: 2rem;
       border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -47,114 +37,85 @@
   </style>
 </head>
 <body>
-  <h1>Privacy Policy for Dashboard Manager Add-on</h1>
+  <h1>Privacy Policy – Dashboard Manager Add-on</h1>
   <p><strong>Presented by Pro Bettors Academy</strong></p>
-  <p><em>Last updated: November 9, 2025</em></p>
+  <p><em>Last updated: November 21, 2025</em></p>
 
   <h2>Introduction</h2>
   <p>
-    Dashboard Manager (“the Add-on”, “we”, “us”, “our”) is a Google Sheets extension 
-    designed to organize, automate, and streamline betting dashboard workflows. 
-    We are committed to protecting your privacy and ensuring full transparency 
-    in how we access and use Google user data.
+    Dashboard Manager is a container-bound Google Sheets add-on built exclusively for the Pro Bettors Academy community.
+    We are fully committed to your privacy and use only the narrowest Google-approved scopes.
   </p>
 
-  <h2>Google OAuth Data Access</h2>
+  <h2>Google OAuth Data Access – Limited to a Single Spreadsheet</h2>
   <p>
-    The Add-on collects <strong>no personal or sensitive user data</strong>. We only request 
-    the minimum Google OAuth scopes required for core functionality:
+    The Add-on collects <strong>no personal data whatsoever</strong>. We request only the following two Google OAuth scopes — both are the most limited scopes Google allows for this type of add-on:
   </p>
-
   <ul>
     <li>
-      <strong>https://www.googleapis.com/auth/spreadsheets</strong><br />
-      Used solely to view and modify sheets inside the user’s <em>currently open</em> 
-      Google Spreadsheet. The Add-on cannot access or open any other files in your Google Drive.
+      <strong>https://www.googleapis.com/auth/spreadsheets.currentonly</strong><br />
+      → Google’s official description: <em>“View and manage spreadsheets that this application has been installed in”</em><br />
+      This scope, combined with the <code>@OnlyCurrentDoc</code> restriction, guarantees the add-on can <strong>only</strong> read or modify the exact spreadsheet you have open. It cannot access any other file in your Google Drive — even if we wanted it to.
     </li>
-
     <li>
       <strong>https://www.googleapis.com/auth/script.container.ui</strong><br />
-      Used only to add custom menu items and display dialogs within the Google Sheets interface. 
-      No user data is collected through these UI components.
+      Used only to display a custom menu and simple alerts inside the open spreadsheet. No data collection occurs through the UI.
     </li>
   </ul>
-
   <p>
-    The Add-on’s access is strictly limited to the spreadsheet you have open 
-    when running the Add-on. No background access, continuous monitoring, 
-    or automated data retrieval occurs.
+    <strong>No broader scopes are requested.</strong> The previous full <code>spreadsheets</code> scope has been permanently replaced with the limited <code>.currentonly</code> version.
   </p>
 
-  <h2>How Data Is Used</h2>
+  <h2>How Your Data Is Used</h2>
   <p>
-    All data processing happens <strong>entirely within your Google account</strong>. 
-    The Add-on performs sheet organization, sheet creation, and dashboard management 
-    using only the content of the active spreadsheet. 
+    All operations occur <strong>entirely within the open spreadsheet</strong> using Google’s built-in SpreadsheetApp service.
+    The add-on performs sheet creation, column adjustments, hiding/showing tabs, and formula updates — nothing more.
   </p>
-
-  <p>
-    The Add-on does <strong>not</strong>:
-  </p>
+  <p>The Add-on <strong>never</strong>:</p>
   <ul>
-    <li>send Google user data to any server</li>
-    <li>store Google user data outside of Google Sheets</li>
-    <li>log, track, or retain any content from your spreadsheet</li>
-    <li>share your data with third parties</li>
+    <li>sends any data to external servers</li>
+    <li>stores or logs spreadsheet content</li>
+    <li>accesses any other file in your Google Drive</li>
+    <li>shares data with third parties</li>
   </ul>
 
-  <h2>Data Storage, Transfer, and Retention</h2>
+  <h2>Data Storage, Transfer & Retention</h2>
   <p>
-    The Add-on stores <strong>no data</strong> on Pro Bettors Academy servers or any external systems. 
-    All operations occur in-memory during execution and are not retained afterward.
-  </p>
-
-  <p>
-    <strong>No user data, metadata, tokens, logs, or spreadsheet content</strong> 
-    is transmitted, saved, or persisted by the Add-on.
+    <strong>Zero data</strong> is stored or transmitted by the add-on. All processing happens in-memory during execution and is discarded immediately afterward.
   </p>
 
   <h2>Third-Party Access</h2>
   <p>
-    The Add-on does not transmit any information to external APIs, databases, services, 
-    or third-party applications. No third party has access to your Google user data 
-    through the Add-on.
+    No third party — including Pro Bettors Academy — ever receives or sees your spreadsheet content.
+    The add-on runs entirely within Google’s secure environment.
   </p>
 
   <h2>Security</h2>
   <p>
-    All data accessed by the Add-on remains protected within Google’s secure cloud infrastructure. 
-    Communication between the Add-on and Google services occurs exclusively over encrypted connections (HTTPS).
+    All communication uses encrypted HTTPS. Your data remains protected by Google’s infrastructure at all times.
   </p>
 
-  <h2>Your Choices &amp; Control</h2>
+  <h2>Your Choices & Control</h2>
   <p>
-    You may uninstall or disable the Add-on at any time through the Google Workspace Marketplace 
-    or your Google account’s permissions page. Revoking permissions immediately disables all access.
+    You can revoke access instantly via <em>My Account → Apps with access to your account</em> or by removing the add-on from Google Sheets.
   </p>
 
-  <h2>Compliance with Google Policies</h2>
+  <h2>Compliance</h2>
   <p>
-    This Add-on’s use of Google user data complies with the 
+    This add-on fully complies with the
     <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">
       Google API Services User Data Policy
-    </a>, including the Limited Use Requirements. 
-    We do not use or transfer Google user data for purposes unrelated to core functionality.
+    </a>, including the Limited Use requirements.
   </p>
 
-  <h2>Updates &amp; Contact</h2>
+  <h2>Updates & Contact</h2>
   <p>
-    This Privacy Policy may be updated to reflect product changes or Google policy requirements. 
-    Any updates will be posted on this page.
-  </p>
-
-  <p>
-    For privacy questions or data requests, contact: 
+    Questions? Reach us at
     <a href="mailto:support@probettorsacademy.com">support@probettorsacademy.com</a>
   </p>
 
   <footer>
-    <p>© 2025 Pro Bettors Academy</p>
+    <p>© 2025 Pro Bettors Academy – All Rights Reserved</p>
   </footer>
 </body>
 </html>
-
